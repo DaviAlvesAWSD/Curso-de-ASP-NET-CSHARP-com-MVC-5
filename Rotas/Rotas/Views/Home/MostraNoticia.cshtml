@@ -1,0 +1,12 @@
+﻿@model Rotas.Models.News
+
+@{
+    ViewBag.Title = "MostraNoticia";
+}
+
+<h2>@Model.Titulo</h2>
+
+<em>@Model.Data - @Html.ActionLink(Model.Categoria, "MostraCategoria", "Home", new { @categoria = @Model.Categoria.ToLower() }, null)</em>
+<hr />
+
+<p>@Model.Conteudo</p>
